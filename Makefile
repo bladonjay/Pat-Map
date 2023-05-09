@@ -1,0 +1,11 @@
+# COMPILE QPBO IF NECESSARY
+TARGETS = QPBO
+
+all: $(TARGETS)
+.PHONY: $(TARGETS)
+
+export MATLAB_MEX_PATH = #INSERT MATLAB MEX PATH HERE
+
+QPBO:
+  $(MAKE) -C src/code/third_party/QPBO-v1.32.src
+  
